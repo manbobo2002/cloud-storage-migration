@@ -1,6 +1,5 @@
 export PROJECT_ID=$(gcloud config list --format 'value(core.project)' 2>/dev/null)
 
-cd $(pwd)/cloud-storage-migration
 #create bucket
 gsutil mb -c standard -l us-central1 gs://${PROJECT_ID}-serving-bucket
 #open to public
